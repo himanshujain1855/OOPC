@@ -1,0 +1,16 @@
+class OO{
+    String operator(String s1, String s2){
+        return s1+s2;
+    }
+    int operator(int a, int b){
+        return a+b;
+    }
+
+}
+public class OperatorOverloading {
+    public static void main(String[] args) {
+        OO t=new OO();
+        System.out.println(t.operator("Himanshu","Jain"));
+        System.out.println(t.operator(33,66));
+    }
+}
