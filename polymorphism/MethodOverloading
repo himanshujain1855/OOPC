@@ -1,0 +1,29 @@
+/**Method Overloading:-Using two method having same name but different parameters and same return type,
+ * We can perform many tasks
+ *Here we have used calculateArea method to calculate Area of Square and Rectangle!
+ */
+
+class Area
+{
+    double calculateArea(double length)
+    {//Square
+        return length*length;
+    }
+
+    double calculateArea(double length,double width )
+    {//Rectangle
+        return length*width;
+    }
+}
+
+public class MethodOverloading {
+   public static void main(String[] a)
+   {
+       Area Square=new Area();
+       Area Rectangle=new Area();
+
+       System.out.println(Square.calculateArea(5));
+       System.out.println(Rectangle.calculateArea(10,10));
+
+   }
+}
