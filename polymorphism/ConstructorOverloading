@@ -1,0 +1,54 @@
+class Student
+{
+    // instance variables
+    final int TOTAL_FEE=1360;
+    int fee=0;
+    long rno;
+    String name,instname,course;
+    char div;
+
+    // Constructor 1
+    Student(long rno,String name,String instname,String course,char div)
+    {
+        this.name=name;
+        this.rno=rno;
+        this.instname=instname;
+        this.course=course;
+        this.div=div;
+    }
+
+    // Constructor 2 with same
+    Student(long rno,String name,String instname,String course,char div,int fee)
+    {
+        this(rno,name,instname,course,div);
+        this.fee=fee;
+    }
+
+    // instance method
+    void printData()
+    {
+     System.out.println("Name: "+name);
+     System.out.println("Enrollment :"+rno);
+     System.out.println("Institute Name :"+instname);
+     System.out.println("Course :"+course);
+     System.out.println("Division: "+div);
+     if(fee==TOTAL_FEE)
+         System.out.println("Fee Status: Paid\n");
+     else
+         System.out.println("Fee Status: Not Paid\n");
+
+    }
+}
+
+
+public class ConstructorOverloading {
+    // Driver Function
+    public static void main(String[] a)
+    {
+        Student s1=new Student(160160107033L,"Himanshu Jain","GEC MODASA","Computer",'A',1360);
+        Student s2=new Student(160160107029L,"Hariom Vyas","GEC MODASA","Computer",'A');
+        s1.printData();
+        s2.printData();
+    }
+
+}
